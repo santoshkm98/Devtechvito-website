@@ -245,32 +245,32 @@ function jss_create_services_taxonomies() {
 }
 
 // Customize the Permalink Structure
-add_filter('post_type_link', 'custom_services_permalink', 10, 2);
-function custom_services_permalink($permalink, $post) {
-  if ($post->post_type === 'services') {
-      // Get the categories assigned to the service
-      $terms = get_the_terms($post->ID, 'service_cat');
-      if ($terms && !is_wp_error($terms)) {
-          // Use the first category
-          $category = array_shift($terms);
-          // Construct the permalink using the category slug
-          $permalink = str_replace('%service_cat%', $category->slug, $permalink);
-      }
-  }
-  return $permalink;
-}
+// add_filter('post_type_link', 'custom_services_permalink', 10, 2);
+// function custom_services_permalink($permalink, $post) {
+//   if ($post->post_type === 'services') {
+//       // Get the categories assigned to the service
+//       $terms = get_the_terms($post->ID, 'service_cat');
+//       if ($terms && !is_wp_error($terms)) {
+//           // Use the first category
+//           $category = array_shift($terms);
+//           // Construct the permalink using the category slug
+//           $permalink = str_replace('%service_cat%', $category->slug, $permalink);
+//       }
+//   }
+//   return $permalink;
+// }
 
-// Ensure the custom permalink structure is registered
-function create_services_posttype_with_permalink() {
-  register_post_type('services', array(
-      'labels' => array(
-          'name' => __('Services'),
-          'singular_name' => __('Service'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => '%service_cat%', 'with_front' => false), // Use the category slug
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
-  ));
-}
-add_action('init', 'create_services_posttype_with_permalink');
+// // Ensure the custom permalink structure is registered
+// function create_services_posttype_with_permalink() {
+//   register_post_type('services', array(
+//       'labels' => array(
+//           'name' => __('Services'),
+//           'singular_name' => __('Service'),
+//       ),
+//       'public' => true,
+//       'has_archive' => true,
+//       'rewrite' => array('slug' => '%service_cat%', 'with_front' => false), // Use the category slug
+//       'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+//   ));
+// }
+// add_action('init', 'create_services_posttype_with_permalink');

@@ -1,189 +1,66 @@
 <section id="footer">
 
-     <div class="fix-center-divs">
+     <div class="fix-layouts">
 
       <div class="row" id="footer-row">
 
-       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12" id="col-divs">
-
+       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12" id="col-divs">
+       <a href="/" class="logo">
+      <img src="<?php bloginfo('template_directory') ?>/images/techvito-white-logo.webp" class="footer-logo"/>
+      </a>
        <div class="footer-main">
-        <div class="footer-card-box">
-        <h4>Digital Business Transformation</h4>
-        <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-        </div>
-        <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ">
-        <div class="footer-card-box">
-         <h5>Product Development</h5>
-         <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-         </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ">
-        <div class="footer-card-box">
-         <h5>Cloud & DevOps</h5>
-         <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-         </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ">
-        <div class="footer-card-box">
-         <h5>Quality</h5>
-         <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-         </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ">
-        <div class="footer-card-box">
-         <h5>Security</h5>
-         <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-         </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ">
-        <div class="footer-card-box">
-         <h5>Digital Transformation</h5>
-         <p>Transform your business digitally to survive completely digitalized and connected worlddriven by software.</p>
-         </div>
-        </div>
-        </div>
-        <!-- <img src="<?php bloginfo('template_directory') ?>/images/techvito-white-logo.webp" class="footer-logo"/>
+        <p>Transform your business digitally to survive completely digitalized</p>
+       
+       </div>
+       <!-- <div class="footer-main"> 
+        <h6>Product Development</h6>
+        <ul>
+          <li>Application Development</li>
+          <li>Product Strategy</li>
+          <li>Application Modernization</li>
+          <li>QA Engineering</li>
+          <li>Infrastructure as Code (IaC) </li>
+          <li>UI/UX Engineering</li>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos amet eveniet fuga, ad reprehenderit iure voluptate accusamus repellat esse impedit necessitatibus non ex consequuntur blanditiis, voluptates itaque libero corporis.</p>
-
-        <div class="social-div">
-        <a href="https://www.instagram.com/techvito/" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/instagram-icon.webp"/>
-
-</a>
-
-<a href="https://www.threads.net/@techvito" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/threads-icon.webp"/>
-
-</a>
-
-<a href="https://in.linkedin.com/company/techvito" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/linkedin-icon.webp"/>
-
-</a>
-
-        </div>
-
+        </ul>
        </div> -->
-
-       </div>
-
-
-       <!-- <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12" id="col-divs">
-         <div class="row">
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12" id="footer-divs">
-          <div class="footer-main">
-          <h6>Company</h6>
-           <ul>
-            <li>About us</li>
-            <li>Our Products</li> 
-            <li>Careers</li>
-           
-          
-           </ul>
-         </div>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12"id="footer-divs">
-           <div class="footer-main">
-           <h6>Services</h6>
-           <ul>
-            <li><a href="" target="_blank">Product Development</a></li>
-            <li><a href="" target="_blank">Cloud & Devops</a></li>
-            <li><a href="" target="_blank">Quality</a></li> 
-            <li><a href="" target="_blank">Security</a></li> 
-            <li><a href="" target="_blank">Digital Transformation</a></li> 
-            
-           </ul>
-           </div>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12"id="footer-divs">
-           <div class="footer-main">
-           <h6>Resources</h6>
-           <ul>
-            <li><a href="" target="_blank">Case Studies</a></li>
-            <li><a href="" target="_blank">Blogs</a></li>
-            <li><a href="" target="_blank">Free Resources</a></li> 
-            
-           </ul>
-           </div>
-          </div>
-         </div>
-        
-
-         </div> -->
-
-        <!-- <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-
-        </div> -->
-        <!-- <div class="social-div">
-        <a href="https://www.instagram.com/techvito/" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/instagram-icon.webp"/>
-
-</a>
-
-<a href="https://www.threads.net/@techvito" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/threads-icon.webp"/>
-
-</a>
-
-<a href="https://in.linkedin.com/company/techvito" target="_blank">
-
-<img src="<?php bloginfo('template_directory') ?>/images/linkedin-icon.webp"/>
-
-</a>
-
-        </div> -->
-         <!-- <h6>Subscribe to Newsletter</h6>
-
-         <p>Subscribe To Our Newsleter for regular updates</p>
-
-         <form id="email-cnt" method="post">
-
-            <div class="form-box">
-
-           <input type="text" name="email-cnt" id="email-cnt" class="inpetxt" placeholder=" Email Address"/>
-
-           <span class="info" id="email-cnt-info"></span>
-
-           <input type="submit" id="email-cnt-submit" value="Let's Talk"/>
-
-            </div>
-
-           </form> -->
-
-
-
       </div>
-      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12" id="col-divs">
        <div class="footer-main">
-       <h6>Company</h6>
+       <h6>Resources</h6>
            <ul>
-            <li>About us</li>
-            <li>Our Products</li> 
-            <li>Careers</li>
-           
-          
+            <li>Blogs</li>
+            <li>Case Studies</li> 
+
            </ul>
        </div>
        </div>
-       <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12">
-       <div class="footer-main">
-       <h6>Services</h6>
-           <ul>
-            <li><a href="" target="_blank">Product Development</a></li>
-            <li><a href="" target="_blank">Cloud & Devops</a></li>
-            <li><a href="" target="_blank">Quality</a></li> 
-            <li><a href="" target="_blank">Security</a></li> 
-            <li><a href="" target="_blank">Digital Transformation</a></li> 
-            
-           </ul>
-       </div>
+  
+      
+      
+       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12">
+      <div class="footer-main">
+      <h6>Contact Us</h6>
+      <div class="footer-cnt">
+     <a href="tel:+91 6363327997"><img src="<?php bloginfo('template_directory') ?>/new-images/telephone_icon.png"/> +91 6363-32-7997</a>
+      </div>
+      <div class="footer-cnt">
+      <a href="mailto:techvito@outlook.com"> <img src="<?php bloginfo('template_directory') ?>/new-images/email_icon.png"/> techvito@outlook.com</a>
+      </div>
+      <div class="footer-cnt">
+        <a> <img src="<?php bloginfo('template_directory') ?>/new-images/location_pin_icon.png"/>Hanumantha Nagar, Bangalore</a>
+      </div>
+     
+      </div>
+      <div class="footer-main">
+      <div class="mobile-social-media-lists">
+        <h4>Follow Us</h4>
+        <div class="socials-list">
+        <a><img src="<?php bloginfo('template_directory') ?>/images/instagram-logo.png"/></a>
+        <a><img src="<?php bloginfo('template_directory') ?>/images/linkedin-logo.png"/></a>
+      </div>
+      </div>
+      </div>
        </div>
          </div>
 
@@ -193,16 +70,33 @@
 
      <hr class="line-clr"/>
 
-     <div class="fix-center-divs">
+     <div class="fix-layouts">
 
      <div class="row" id="copyrightrow">
+     
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12">
+    
+      
+      <ul class="terms-policy">
+        <li>Copyright © 2024 Techvito All Rights Reserved |</li>
+        <li><a>Terms & Conditions</a> |</li>
+        <li><a>Privacy Policy</a></li>
+      </ul>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-12">
+      <div class="social-media-lists">
+        <div class="socials-list">
+        <a><img src="<?php bloginfo('template_directory') ?>/images/instagram-logo.png"/></a>
+        <a><img src="<?php bloginfo('template_directory') ?>/images/linkedin-logo.png"/></a>
+      </div>
+      </div>
 
-     <div class="col-md-12 col-lg-12">
+     <!-- <div class="col-md-12 col-lg-12">
 
       <p style="text-align:center;">© Copyrights Techvito 2024 All Rights Reserved</p>
       <p style="text-align:center; font-size:12px; ">Images Designed by <a style="text-decoration:underline;" href="https://www.freepik.com/" target="_blank">Freepik</a></p>
 
-     </div>
+     </div> -->
 
      <!-- <div class="col-md-12 col-lg-6">
 

@@ -162,74 +162,11 @@ endif;
                 <?php } ?> 
                 <?php } ?> 
 
-                <!-- <div class="service-process-item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-12">
-                            <div class="process-image">
-                                <img src="https://cdn.prod.website-files.com/6365117e0f7392f8f79f332d/6378fbc38c7bd87351cefbe0_Submit.png"
-                                    class="process-images-item" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 col-12">
-                            <div class="process-content-container">
-                                <h3>Innovative Design & User Experience</h3>
-                                <p>Our design team crafts visually appealing and intuitive user interfaces. We focus on delivering exceptional user experiences by combining aesthetics with functionality, ensuring that your application is easy to use and aligns with your brand identity.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-process-item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-12">
-                            <div class="process-image">
-                                <img src="https://cdn.prod.website-files.com/6365117e0f7392f8f79f332d/6378fbc38c7bd87351cefbe0_Submit.png"
-                                    class="process-images-item" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 col-12">
-                            <div class="process-content-container">
-                                <h3>Agile Development Process</h3>
-                                <p>We follow agile methodologies to ensure flexibility and collaboration throughout the development process. Our iterative approach allows us to adapt to changes quickly, deliver functional components in phases, and involve you in every step of the journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-process-item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-12">
-                            <div class="process-image">
-                                <img src="https://cdn.prod.website-files.com/6365117e0f7392f8f79f332d/6378fbc38c7bd87351cefbe0_Submit.png"
-                                    class="process-images-item" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 col-12">
-                            <div class="process-content-container">
-                                <h3>Scalable & Secure Architecture</h3>
-                                <p>Our team builds applications on scalable architectures that grow with your business needs. We integrate robust security protocols at every level to protect your data, ensuring compliance with industry standards and providing peace of mind.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-process-item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-12">
-                            <div class="process-image">
-                                <img src="https://cdn.prod.website-files.com/6365117e0f7392f8f79f332d/6378fbc38c7bd87351cefbe0_Submit.png"
-                                    class="process-images-item" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 col-12">
-                            <div class="process-content-container">
-                                <h3>Continuous Testing & Improvement</h3>
-                                <p>Quality is at the heart of what we do. We conduct rigorous testing at every stage of development to identify and resolve issues early. Post-launch, we provide continuous improvements based on user feedback and evolving technology trends.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
             <ul class="process-slider-btns">
-                <li class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
-                <li class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                <li class="prev"><i class="fa-solid fa-arrow-left"></i></li>
+                <li class="next"><i class="fa-solid fa-arrow-right"></i></li>
             </ul>
         </div>
     </div>
@@ -262,46 +199,7 @@ endif;
                 </div>
                 <?php } ?> 
                 <?php } ?> 
-                <!-- <div class="choose-us-item">
-                    <div class="choose-icon-container">
-                        <img src="<?php bloginfo('template_directory') ?>/new-images/scaleability.svg" alt="Icon 2"
-                            class="icon" />
-                    </div>
-                    <h3>Scalability</h3>
-                  <p>Applications that grow with your business seamlessly.</p>
-                </div>
-                <div class="choose-us-item">
-                    <div class="choose-icon-container">
-                        <img src="<?php bloginfo('template_directory') ?>/new-images/security.svg" alt="Icon 3"
-                            class="icon" />
-                    </div>
-                    <h3>Security</h3>
-                   <p>Enterprise-grade protection for data and user privacy.</p>
-                </div>
-                <div class="choose-us-item">
-                    <div class="choose-icon-container">
-                        <img src="<?php bloginfo('template_directory') ?>/new-images/user-centric.svg" alt="Icon 4"
-                            class="icon" />
-                    </div>
-                    <h3>User-Centric Design</h3>
-                  <p>Tailored experiences for enhanced user engagement.</p>
-                </div>
-                <div class="choose-us-item">
-                    <div class="choose-icon-container">
-                        <img src="<?php bloginfo('template_directory') ?>/new-images/innovation.svg" alt="Icon 5"
-                            class="icon" />
-                    </div>
-                    <h3>Innovation</h3>
-                 <p>Cutting-edge solutions driving your digital transformation.</p>
-                </div>
-                <div class="choose-us-item">
-                    <div class="choose-icon-container">
-                        <img src="<?php bloginfo('template_directory') ?>/new-images/Reliability.svg" alt="Icon 6"
-                            class="icon" />
-                    </div>
-                    <h3>Reliability</h3>
-                    <p>High-performance applications built to last.</p>
-                </div> -->
+
             </div>
         </div>
     </div>
@@ -312,8 +210,8 @@ endif;
         <h2>What Makes Us Different</h2>
         <div class="offerings-detail">
             <ul class="expertise-slider-btns">
-                <li class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
-                <li class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+             <li class="prev"><i class="fa-solid fa-arrow-left"></i></li>
+                <li class="next"><i class="fa-solid fa-arrow-right"></i></li>
             </ul>
             <div class="offerings-layout">
 
@@ -409,28 +307,33 @@ endif;
         <div class="related-topics-container">
             <div class="related-topics-box">
                 <?php
-                // Get the terms (categories) for the current services post
+                // Get the terms (categories) for the current service post
                 $service_terms = get_the_terms(get_the_ID(), 'service_cat');
+
+                // Initialize related posts array
                 $related_posts = [];
                 $current_post_id = get_the_ID();
 
                 // Check if there are terms and no errors
                 if ($service_terms && !is_wp_error($service_terms)) {
-                    // Get term IDs
+                    // Get term IDs from the service's categories
                     $term_ids = wp_list_pluck($service_terms, 'term_id');
 
-                    // Fetch posts related to the selected service categories, excluding the current post
+                    // Fetch case studies related to the service's categories
                     $related_posts = get_posts(array(
                         'post_type' => 'casestudy',
                         'tax_query' => array(
                             array(
-                                'taxonomy' => 'casestudy_category', // The taxonomy for case studies
+                                'taxonomy' => 'casestudy_category', // Match case study categories
                                 'field' => 'term_id',
-                                'terms' => $term_ids, // Match with the term IDs from services
+                                'terms' => $term_ids, // Use the service's category term IDs
+                                'operator' => 'IN', // Ensure that posts with matching terms are retrieved
                             ),
                         ),
-                        'post__not_in' => array($current_post_id), // Exclude the current services post
-                        'posts_per_page' => 3, // Fetch up to 3 related posts
+                        'posts_per_page' => 3, // Limit to 3 related case studies
+                        'orderby' => 'date', // Order by the most recent case studies
+                        'order' => 'DESC', // Most recent first
+                        'post__not_in' => array($current_post_id), // Exclude current service post
                     ));
                 }
 
@@ -441,17 +344,14 @@ endif;
                         'post_type' => 'casestudy',
                         'posts_per_page' => $remaining_posts_needed,
                         'post__not_in' => array_merge(array($current_post_id), wp_list_pluck($related_posts, 'ID')), // Ensure no duplicates
-                        'orderby' => 'rand', // Randomize order
+                        'orderby' => 'rand', // Randomize order for the fallback posts
                     ));
 
                     // Merge related and random posts
                     $related_posts = array_merge($related_posts, $random_posts);
                 }
 
-                // Limit to a maximum of 3 posts
-                $related_posts = array_slice($related_posts, 0, 3);
-
-                // Loop through the posts and display them
+                // Display related case studies
                 if (!empty($related_posts)) {
                     foreach ($related_posts as $post) {
                         setup_postdata($post); ?>
@@ -471,11 +371,14 @@ endif;
                 } else {
                     echo '<p>No related case studies found.</p>';
                 }
-                wp_reset_postdata(); // Reset the global $post variable ?>
+
+                wp_reset_postdata(); // Reset global $post variable
+                ?>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <!-- <section id="related-studies">
@@ -525,57 +428,61 @@ endif;
 
 
 <section id="contact-us">
-<div class="fix-layouts">
-<div class="quick-contact">
+  <div class="fix-layouts">
+    <div class="quick-contact">
 
-<form id="contactus-enquiry" method="post">
-<h3>Contact Us</h3>
-          <div class="row">
-            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 col-12">
-            <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
+      <form id="contactus-enquiry" method="post">
+        <h3>How can we Help ?</h3>
+        <p>Do you have a question or you are interested in working with my team?
+          <br />
+          Just fill out the form below.
+        </p>
+
+        <div class="row">
+          <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-12 mx-auto">
+            <div class="form-enquiries">
+              <div class="form-box">
+               <select  name="subject" id="subject" class="form-input" >
+                <option value="" disabled selected>I'd like to chat about</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Consulting Inquiry">Consulting Inquiry</option>
+
+               </select>
+               <span class="info" id="subject-info"></span>
+              </div>
+             
+              <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
               <div class="form-box">
                 <input type="text" name="cnt_name" id="cnt_name" class="form-input" placeholder="Full Name" />
                 <span class="info" id="cnt_name_info"></span>
               </div>
-              <div class="form-box">
-                <input type="text" name="cnt_phonenumber" id="cnt_phonenumber" class="form-input"
-                  placeholder="Phone Number" />
-                <span class="info" id="cnt_phonenumber_info"></span>
               </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
+              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
               <div class="form-box">
                 <input type="text" name="cnt_email" id="cnt_email" class="form-input" placeholder="Business Email" />
                 <span class="info" id="cnt_email_info"></span>
               </div>
-              <div class="form-box">
-                <input type="text" name="cnt_company_name" id="cnt_company_name" class="form-input"
-                  placeholder="Company Name" />
-                <span class="info" id="cnt_companyname_info"></span>
               </div>
-            </div>
-            <div class="form-box">
-              <textarea class="cntinpttxt" name="message" id="message" placeholder="Message"></textarea>
-            </div>
-            <div class="submit-cta-action">
-              <input type="submit" name="cnt_submit" id="cnt_submit" value="submit" />
+              <div class="form-box">
+                <textarea class="cntinpttxt" name="message" id="message" placeholder="Message"></textarea>
+              </div>
+              <div class="submit-cta-action">
+              <input type="submit" name="cnt_submit" id="cnt_submit" value="Submit" />
               <p>Loading Please wait</p>
             </div>
-            </div>
-            
-            </div>
-            <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 col-12">
-            <img src="<?php bloginfo('template_directory') ?>/images/techvito-white-logo.webp" alt="Logo" />
+              </div>
             </div>
           </div>
-          </div>
-          
+        </div>
 
 
-        </form>
-</div>
-</div>
+
+
+      </form>
+    </div>
+
+  </div>
 </section>
 <script>
   $(".related-topics-box").slick({

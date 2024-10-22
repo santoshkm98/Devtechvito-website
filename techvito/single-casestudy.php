@@ -4,7 +4,6 @@
     while (have_posts()):
         the_post();
         $image_id = get_post_thumbnail_id();
-        //go get image attributes [0] => url, [1] => width, [2] => height
         $image_url = wp_get_attachment_image_src($image_id, '', true);
         $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
         <section id="detail-layouts">
@@ -131,7 +130,7 @@
                             <a href="<?php the_permalink(); ?>">
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <span>Read More &#xf061;</span>
+                                <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
                             </a>
                         </div>
                     </div>
@@ -165,17 +164,6 @@ $pdf_file = get_field('case_study_pdf');
                 <span class="info" id="cs_companyname_info"></span>
             </div>
             <div class="cs_download_cta">
-            <?php wp_nonce_field('cs_download_nonce', 'cs_download_nonce_field'); ?>
-            <?php
-$file = get_field('case_study_pdf');
-if ($file):
-    $url = $file['url'];
-    $encoded_url = base64_encode($url);
-    $title = $file['title'];
-    ?>
-      <input type="hidden" name="file_url" value="<?php echo esc_attr($encoded_url); ?>">
-      <span><?php echo esc_html($title); ?></span>
-      <?php endif; ?>
            <input type=submit id="cs_download" name="cs_download" value="Download Now"/>
            </div>
         </form>
@@ -183,82 +171,8 @@ if ($file):
 </div>
 
 <style>
-    .popup {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1000;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Black background with opacity */
-    }
+  
 
-    .casestudypopup {
-        background-color: #1e232e;
-        padding: 40px 20px;
-        border-radius: 12px;
-        margin: 7% auto;
-        width: 500px;
-    }
-
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-
-        text-decoration: none;
-        cursor: pointer;
-    }
-    #casestudy-popupForm h3{
-   text-align: center;
-   color: #fff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    }
-    #casestudydownloadform #cs_download{
-        background: #4285f5;
-    padding: 10px 20px;
-    border-radius: 12px;
-    color: #fff !important;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    transition: .5s;
-    text-align: center;
-
-    }
-    #casestudydownloadform #cs_download:hover{
-        background: #0f55cc;
-    }
-    .cs_download_cta{
-        text-align: center;
-    }
-    #pdf-field-value {
-        display: none;
-    }
-    .cta-download-pdf a{
-        background: #4285f5;
-    padding: 10px 20px;
-    border-radius: 12px;
-    color: #fff !important;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    border: none;
-    transition: .5s;
-    }
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function () {

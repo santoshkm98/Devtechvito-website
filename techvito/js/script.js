@@ -4,7 +4,7 @@ jQuery(document).ready(function(e) {
 
   jQuery('#loader-icons').hide();
   
-    jQuery("#contact-form").on('submit',function(e){
+    jQuery("#contactus-enquiry").on('submit',function(e){
   
       e.preventDefault();
   
@@ -20,7 +20,7 @@ jQuery(document).ready(function(e) {
   
             jQuery.ajax({
   
-              url: "https://www.techvito.in/wp-content/themes/techvito/mail/contact-form.php",
+              url: "https://dev.techvito.in/wp-content/themes/techvito/mail/contact-form.php",
   
               type: "POST",
   
@@ -34,11 +34,11 @@ jQuery(document).ready(function(e) {
   
               success: function(data){
   
-                  document.getElementById("contact-form").reset();  
+                  document.getElementById("contactus-enquiry").reset();  
   
                     
   
-                   window.location.href="https://www.techvito.in/";   
+                      
   
                  jQuery('#loader-icons').hide();
   
@@ -60,72 +60,90 @@ jQuery(document).ready(function(e) {
   
   jQuery(".info").html('');
   
-  if(!jQuery("#namecnt").val()) {
+  if(!jQuery("#cnt_name").val()) {
   
-    jQuery("#nameinfo").html("Please Enter a Name");  
+    jQuery("#cnt_name_info").html("Please Enter a Name");  
   
-    jQuery("#namecnt").css('border-color','red');
+    jQuery("#cnt_name").css('border-color','red');
   
    valid = false;  
   
   }
   
-  if(!jQuery("#namecnt").val().match(/^[a-zA-Z\s]+$/)) {
+  else if(!jQuery("#cnt_name").val().match(/^[\s\S]{1,100}$/) || !jQuery("#cnt_name").val().match(/^[a-zA-Z\s]+$/))  {
+    
+    jQuery("#cnt_name_info").html("Please enter valid name");  
   
-    jQuery("#nameinfo").html("Please Enter Valid Name");  
-  
-    jQuery("#namecnt").css('border-color','red');
+    jQuery("#cnt_name").css('border-color','red');
   
     valid = false;
   
   }
-  
+  else {
+    jQuery("#cnt_name_info").html("");  
+            jQuery("#cnt_name").css('border-color', '');
+  }
 
-  if(!jQuery("#phonecnt").val()) {
+  if(!jQuery("#cnt_phone").val()) {
   
-    jQuery("#numberinfo").html("Please enter mobile number");
+    jQuery("#cnt_phone_info").html("Please enter mobile number");
   
-    jQuery("#phonecnt").css('border-color','red');
-  
-    valid = false;
-  
-  }
-  
-  if(!jQuery("#phonecnt").val().match(/^(\+\d{1,3}[- ]?)?\d{10}$/)){
-  
-    jQuery("#numberinfo").html("Please enter valid digits");
-  
-    jQuery("#phonecnt").css('border-color','red');
+    jQuery("#cnt_phone").css('border-color','red');
   
     valid = false;
   
   }
   
-  if(!jQuery("#emailcnt").val()) {
+  else if(!jQuery("#cnt_phone").val().match(/^(\+\d{1,3}[- ]?)?\d{10}$/)){
+    
+    jQuery("#cnt_phone_info").html("Please enter valid mobile number");
   
-    jQuery("#emailinfo").html("Please Enter Email");
-  
-    jQuery("#emailcnt").css('border-color','red');
-  
-    valid = false;
-  
-  }
-  
-  if(!jQuery("#emailcnt").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-  
-    jQuery("#emailinfo").html("Please Enter Valid Email");
-  
-    jQuery("#emailcnt").css('border-color','red');
+    jQuery("#cnt_phone").css('border-color','red');
   
     valid = false;
   
   }
+  else {
+    jQuery("#cnt_phone_info").html(""); 
+    jQuery("#cnt_phone").css('border-color', '');
+  } 
+
+
   
-  if(!jQuery("#subjectcnt").val()) { 
-    jQuery("#subjectinfo").html("Please Enter the requirement");   
-    jQuery("#subjectcnt").css('border-color','red');
+   if(!jQuery("#cnt_email").val()) {
+    
+      jQuery("#cnt_email_info").html("Please enter email");
+    
+      jQuery("#cnt_email").css('border-color','red');
+    
+      valid = false;
+    
+    }
+    
+   else if(!jQuery("#cnt_email").val().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+    
+      jQuery("#cnt_email_info").html("Please enter valid email");
+    
+      jQuery("#cnt_email").css('border-color','red');
+    
+      valid = false;
+    
+    }
+    else {
+      jQuery("#cnt_email_info").html("");
+      jQuery("#cnt_email").css('border-color', '');
+     
+  }
+  
+  if(!jQuery("#information").val()) { 
+    jQuery("#information-info").html("Please select your requirement");   
+    jQuery("#information").css('border-color','red');
     valid = false;
   
+  }
+  else {
+    jQuery("#information-info").html("");   
+    jQuery("#information").css('border-color','');
   }
 
   if(jQuery("input[type='checkbox']:checked").length<=0){

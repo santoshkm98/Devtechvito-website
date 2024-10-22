@@ -11,7 +11,12 @@ if ($_POST) {
     $name = $_POST['cs_name'];
     $email = $_POST['cs_email'];
     $companyname = $_POST['cs_companyname'];
-    $pdffile = $_POST['download-pdf'];
+    $pdffile = get_field('case_study_pdf'); 
+
+    if (!$pdffile || !file_exists($pdffile)) {
+        echo "<p>The requested PDF file is not available.</p>";
+        exit;
+    }
 
 
     // to client
@@ -30,7 +35,7 @@ if ($_POST) {
 
     $mailer->Password ='cppkcvkepxztjrok';
     
-    $mailer->From ='enquirytechvito@gmail.com';
+    $mailer->From ='Techvito';
     
     $mailer->FromName = "Plan Madi";
     $mailer->IsHTML(true);
@@ -63,7 +68,7 @@ if ($_POST) {
 
     $mailer1->Password ='cppkcvkepxztjrok';
     
-    $mailer1->From ='enquirytechvito@gmail.com';
+    $mailer1->From ='Techvito';
     $mailer1->FromName = $name;
     $mailer1->IsHTML(true);
 
@@ -89,6 +94,7 @@ if ($_POST) {
         $mailer1->AddAddress($email1);
     }
     $mailer1->AddAddress($email); // Also add the user's email
+    $mailer1->AddAttachment($pdffile); 
 
     // Add PDF attachment to admin email
     // if ($pdf_file) {

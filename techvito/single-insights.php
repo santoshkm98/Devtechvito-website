@@ -3,21 +3,18 @@
 
     while (have_posts()):
         the_post();
-        $image_id = get_post_thumbnail_id();
-        //go get image attributes [0] => url, [1] => width, [2] => height
-        $image_url = wp_get_attachment_image_src($image_id, '', true);
-        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+?>
         <section id="detail-layouts" class="case-study-main">
 
             <div class="fix-layouts">
                 <div class="row">
-                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12 mx-auto">
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-12 mx-auto">
                         <div class="blog-breadcrumbs">
                             <ul>
                                 <li><a>Home</a></li>
-                                <li>&#xf061;</li>
-                                <li><a>Blogs</a></li>
-                                <li>&#xf061;</li>
+                                <li><i class="fa-solid fa-arrow-right blg-read-more-icon"></i></li>
+                                <li><a>Insights</a></li>
+                                <li><i class="fa-solid fa-arrow-right blg-read-more-icon"></i></li>
                                 <li><?php the_title(); ?></li>
                             </ul>
                         </div>
@@ -37,9 +34,13 @@
                                     <p><?php the_time('F jS, Y'); ?></p>
                                 </div> -->
                             </div>
-                            <?php if (has_post_thumbnail()) { ?>
-                                <img src="<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>" class="Blog-detail-image">
-                            <?php } ?>
+                           
+           <?php               
+    $image_url = get_field('insights_image'); 
+    if ($image_url) { ?>
+        <img src="<?php echo esc_url($image_url['url']); ?>" alt="<?php the_title(); ?>" class="Blog-detail-image">
+    <?php } 
+ ?>
                            
                         </div>
 
@@ -47,12 +48,14 @@
                 </div>
 
                 <div class="row">
-                 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 col-12 share-socials">
+                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 col-12 share-socials">
+                    <div class="sharing-options">
                     <h4>Share</h4>
                     <br/>
                  <?php echo do_shortcode('[Sassy_Social_Share]'); ?>
                  </div>
-                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-12 mainblog-content-area">
+                 </div>
+                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12 mainblog-content-area">
                     <!-- <div class="border-line"></div> -->
                  <div class="blog-content-division">
                             <?php $blogcontents= get_field('content_area');
@@ -62,6 +65,7 @@
 
                  </div>
                  <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 table-of-contents">
+                    <div class="blogs-container-boxes">
                  <div class="blog-related-topics-box">
                   <div class="related-blog-lists">
                     <h5>Related Topics</h5>
@@ -99,8 +103,15 @@ if ($insights_query->have_posts()) {
 wp_reset_postdata();
 ?>
                   </div>
+                 
                  </div>
-                 </div>
+                 <div class="subscription-insights">
+    <a id="openPopup"class="subscribe-button">
+        Subscribe to our blog
+        <span><i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
+    </a>
+</div>
+              </div>
                 </div>
 
             </div>
@@ -187,7 +198,7 @@ wp_reset_postdata();
                             <a href="<?php the_permalink(); ?>">
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <span>Read More &#xf061;</span>
+                                <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
                             </a>
                         </div>
                     </div>
@@ -197,6 +208,26 @@ wp_reset_postdata();
         </div>
     </div>
 </section>
+<div id="casestudy-popupForm" class="popup">
+    <div class="subscribepopup">
+        <span class="close">&times;</span>
+        <h3>Don't Miss Out! <br/> Subscribe for Exclusive Insights!</h3>
+        <form id="casestudydownloadform"  action="https://dev.techvito.in/wp-content/themes/techvito/mail/services-mailer.php"  method="post">
+            <div class="form-box">
+                <input id="cs_name" name="cs_name" placeholder="Name*" class="form-input">
+                <span class="info" id="cs_name_info"></span>
+            </div>
+            <div class="form-box">
+                <input id="cs_email" name="cs_email" placeholder="Email*" class="form-input">
+                <span class="info" id="cs_email_info"></span>
+            </div>
+
+            <div class="cs_download_cta">
+           <input type=submit id="cs_download" name="cs_download" value="Download Now"/>
+           </div>
+        </form>
+    </div>
+</div>
 <script>
       $(".related-topics-box").slick({
    slidesToShow: 3,
@@ -217,7 +248,7 @@ wp_reset_postdata();
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -225,7 +256,7 @@ wp_reset_postdata();
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -233,5 +264,37 @@ wp_reset_postdata();
       }
     ]
   });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var popup = document.getElementById("casestudy-popupForm");
+        var btn = document.getElementById("openPopup");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Open the popup when the button is clicked
+        btn.onclick = function () {
+            popup.style.display = "block";
+        }
+
+        // Close the popup when the close (x) is clicked
+        span.onclick = function () {
+            popup.style.display = "none";
+        }
+
+        // Close the popup when clicking outside of the popup content
+        window.onclick = function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        }
+
+        // Optional: Handle form submission
+        document.getElementById("casestudydownloadform").onsubmit = function (event) {
+            event.preventDefault(); // Prevent default form submission
+            // Handle form submission logic here
+            alert('Form submitted!'); // Example action
+            popup.style.display = "none"; // Close the popup after submission
+        }
+    });
 </script>
 <?php get_footer(); ?>
