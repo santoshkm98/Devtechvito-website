@@ -27,11 +27,11 @@ $mailer->Host ='smtp.gmail.com';
 $mailer->Port       = 465;
 $mailer->SMTPAuth =TRUE;
 
-$mailer->Username ='enquirytechvito@gmail.com';  
+$mailer->Username ='';  
 
-$mailer->Password ='cppkcvkepxztjrok';
+$mailer->Password ='';
 
-$mailer->From ='enquirytechvito@gmail.com';
+$mailer->From ='';
 
 $mailer->FromName ="Techvito"; 
 $mailer->IsHTML(true);  
@@ -59,11 +59,11 @@ $mailer1->Host ='smtp.gmail.com';
 $mailer1->Port       = 465;
 $mailer1->SMTPAuth =TRUE;
 
-$mailer1->Username ='enquirytechvito@gmail.com';  
+$mailer1->Username ='';  
 
-$mailer1->Password ='cppkcvkepxztjrok';
+$mailer1->Password ='';
 
-$mailer1->From ='enquirytechvito@gmail.com';
+$mailer1->From ='';
 
 $mailer1->FromName ='Techvito';
 $mailer1->IsHTML(true);
@@ -85,7 +85,7 @@ $mailer1->Subject =$email_subject;
 
 //To
 
-$to_admin="santosh.manjunath@techvito.in";
+$to_admin="";
 $recipients_to1=explode(",",$to_admin);
 foreach($recipients_to1 as $email1);
 {
@@ -94,7 +94,7 @@ $mailer1->AddAddress($email1);
 
 //CC
 
-$cc_address="akshatha.janakaraju@techvito.in";
+$cc_address="";
 $mailer1->AddCC($cc_address);
 
 
