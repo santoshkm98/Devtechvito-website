@@ -6,7 +6,7 @@
 <div class="fix-layouts">
 <div class="hero-container">
   <div class="hero-bg-overlay"></div>
-  <!-- <span id="company-brand">Techvito</span> -->
+
   <h1>Transform Business Digitally</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsa eveniet quo sed doloremque quas</p>
   <div class="hero-container-cta">
@@ -15,14 +15,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
 <a class="hero_secondary">Contact Us <i
 class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
   </div>
-<!-- <div class="row">
-<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
-<h1>Transform Business <br/> Digitally</h1>
-</div>
-<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
-<img src=""/>
-</div>
-</div> -->
+
 
 </div>
 </div>
@@ -52,29 +45,30 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
               $query->the_post();
               $case_study_image = get_field('case_study_card_image'); ?>
 
-              <div class="blog-content-card col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12" data-categories="<?php
+                  <div class="blog-content-card col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12" data-categories="<?php
 
-              ?>">
-                <div class="card-details">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php if ($case_study_image) { ?>
-                      <img src="<?php echo esc_url($case_study_image['url']); ?>" alt="<?php the_title(); ?>">
-                    <?php } ?>
-                    <div class="related-topic-content">
-                      <h4><?php the_title(); ?></h4>
-                      <p><?php echo wp_trim_words(get_the_content(), 15); ?></p>
-                      <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
-                    </div>
-                    <!-- <div class="card-contents">
+                  ?>">
+                    <div class="card-details">
+                      <a href="<?php the_permalink(); ?>">
+                        <?php if ($case_study_image) { ?>
+                            <img loading="eager" src="<?php echo esc_url($case_study_image['url']); ?>" alt="<?php the_title(); ?>">
+                        <?php } ?>
+                        <div class="related-topic-content">
+                          <h4><?php the_title(); ?></h4>
+                     
+                          <p><?php echo wp_trim_words(get_the_content(), 15); ?></p>
+                          <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
+                        </div>
+                        <!-- <div class="card-contents">
                                               
                                             <span><img src="<?php bloginfo('template_directory') ?>/images/time-clock-icon.png"
                                                     class="blog-card-icons" /><?php echo do_shortcode('[rt_reading_time postfix="mins"]'); ?></span>
                                         </div>
                                         <a href="<?php the_permalink(); ?>" class="read-more-link">Read More</a> -->
-                  </a>
-                </div>
-              </div>
-            <?php endwhile;
+                      </a>
+                    </div>
+                  </div>
+              <?php endwhile;
           else:
             echo '<p>No posts found.</p>';
           endif;
@@ -85,7 +79,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       </div>
     </div>
     <div class="view-more-cta">
-      <a>View More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
+      <a href="<?php echo home_url(); ?>/case-study/">View More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
     </div>
   </div>
 </section>
@@ -94,7 +88,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
     <div class="row" id="stats-row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
         <div class="stats-contents">
-          <h4>We build lasting partnerships with our clients</h4>
+          <h4>Trusted by the world's leading organizations</h4>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
@@ -102,24 +96,24 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
         <div class="stats-items">
     <div class="stats1" > 
       <h5>5+</h5>
-    <span>Years of delivering quality solutions</span>
+    <span>Years of delivering Exceptional Results</span>
   </div>
     <div class="stats2" >
 
-    <h5>4.9/5</h5>
-    <span>Average customer satisfaction rating</span>
+    <h5>3X</h5>
+    <span>Faster Client Feedback Integration</span>
     </div>
     <div class="stats3" >
     <h5>10+</h5>
-    <span>Satisfied Clients</span>
+    <span>Clients enjoying our Services</span>
     </div>
     <div class="stats4" >
-    <h5>98%</h5>
-    <span>Projects delivered on time within budget</span>
+    <h5>100%</h5>
+    <span>Compliance with Industry Standards</span>
     </div>
     <div class="stats5" >
-    <h5>100%</h5>
-    <span>Clients from repeat business or referrals</span>
+    <h5>95%</h5>
+    <span>Customer Satisfaction Score</span>
     </div>
 </div>
       </div>
@@ -174,9 +168,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
           
             <div class="expertise-card-content">
               <p class="expertise-card-title">Product Development</p>
-              <p class="expertise-card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                rates. No
-                interest charged, ever.</p>
+              <p class="expertise-card-description">Transform ideas into market-ready solutions, maximizing engagement through cutting-edge product innovations.</p>
             </div>
           </div>
         </div>
@@ -186,9 +178,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
           <div class="container-card-logo-cloud"></div>
             <div class="expertise-card-content">
               <p class="expertise-card-title">Cloud & DevOps</p>
-              <p class="expertise-card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                rates. No
-                interest charged, ever.</p>
+              <p class="expertise-card-description">Accelerate deployment and scalability, leveraging automation and cloud solutions to drive higher customer satisfaction.</p>
             </div>
           </div>
         </div>
@@ -196,10 +186,8 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
           <div class="container-card ">
           <div class="container-card-logo-quality"></div>
             <div class="expertise-card-content">
-              <p class="expertise-card-title">Quality</p>
-              <p class="expertise-card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                rates. No
-                interest charged, ever.</p>
+              <p class="expertise-card-title">Quality Assurance</p>
+              <p class="expertise-card-description">Deliver flawless products with rigorous testing and continuous quality checks, ensuring customer delight & higher revenue growth.</p>
             </div>
           </div>
         </div>
@@ -208,10 +196,8 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
           <div class="container-card ">
           <div class="container-card-logo-security"></div>
             <div class="expertise-card-content">
-              <p class="expertise-card-title">Security</p>
-              <p class="expertise-card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                rates. No
-                interest charged, ever.</p>
+              <p class="expertise-card-title">Advanced Security</p>
+              <p class="expertise-card-description">Build trust through robust, proactive security measures, safeguarding data and preventing breaches.</p>
             </div>
           </div>
         </div>
@@ -243,7 +229,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       </div>
       </a>
       </div>
-      <div class="product-layout-item">
+      <!-- <div class="product-layout-item">
         <a href="https://www.evolvv.in/" target="_blank">
       <img src="<?php bloginfo('template_directory') ?>/new-images/Product-Evolvv.webp"/>
       <div class="product-layout-content">
@@ -251,8 +237,8 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       <p>Learning from top tech experts offers vital insights and keeps individuals updated in the fast-changing tech landscape, fostering growth and success.</p>
       </div>
       </a>
-      </div>
-      <div class="product-layout-item">
+      </div> -->
+      <!-- <div class="product-layout-item">
         <a href="https://solvv.in/" target="_blank">
       <img src="<?php bloginfo('template_directory') ?>/new-images/Product-solvv.webp"/>
       <div class="product-layout-content">
@@ -260,8 +246,8 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       <p>Learning should be fun, interactive, and effective. With our platform, you can crack challenging quizzes while sharpening your knowledge along the way. Designed to help you learn smarter.</p>
       </div>
       </a>
-      </div>
-      <div class="product-layout-item">
+      </div> -->
+      <!-- <div class="product-layout-item">
         <a href="https://www.thelearningbuddy.in/" target="_blank">
       <img src="<?php bloginfo('template_directory') ?>/new-images/Product-learningbuddy.webp"/>
       <div class="product-layout-content">
@@ -269,7 +255,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       <p>A platform designed to make learning accessible and engaging for everyone. It offers daily tech tips, interview guidance, and industry insights through WhatsApp, providing a free and convenient way for users to enhance their skills.</p>
       </div>
       </a>
-      </div>
+      </div> -->
       
     </div>
     </div>
@@ -494,19 +480,19 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
         <ul>
           <li><a href="#side_tab1" class="active"><img src="<?php bloginfo('template_directory') ?>/new-images/handshake-icon.svg"/>The First Handshake
           </a></li>
-          <li><a href="#side_tab2"><img src="<?php bloginfo('template_directory') ?>/new-images/aligning-vision-icons.svg"/>Aligning Vision and Setting Goals
+          <li><a href="#side_tab2"><img src="<?php bloginfo('template_directory') ?>/new-images/aligning-vision-icons.svg"/>Aligning Vision and Goals
           </a></li>
           <li><a href="#side_tab3"><img src="<?php bloginfo('template_directory') ?>/new-images/strategic-roadmap-icons.svg"/>Strategic Roadmap
           </a></li>
-          <li><a href="#side_tab4"><img src="<?php bloginfo('template_directory') ?>/new-images/agile-development-icons.svg"/>Iterative and Agile Development
+          <li><a href="#side_tab4"><img src="<?php bloginfo('template_directory') ?>/new-images/agile-development-icons.svg"/>Iterative Development
           </a></li>
-          <li><a href="#side_tab5"><img src="<?php bloginfo('template_directory') ?>/new-images/quality-execution-icons.svg"/>Secure and High-Quality Execution
+          <li><a href="#side_tab5"><img src="<?php bloginfo('template_directory') ?>/new-images/quality-execution-icons.svg"/>High-Quality Execution
 
           </a></li>
-          <li><a href="#side_tab6"><img src="<?php bloginfo('template_directory') ?>/new-images/transperant-communication-icons.svg"/>Open and Transparent Communication
+          <li><a href="#side_tab6"><img src="<?php bloginfo('template_directory') ?>/new-images/transperant-communication-icons.svg"/>Transparent Communication
 
           </a></li>
-          <li><a href="#side_tab7"><img src="<?php bloginfo('template_directory') ?>/new-images/ongoing-support-icon.svg"/>Ongoing Support and Evolution
+          <li><a href="#side_tab7"><img src="<?php bloginfo('template_directory') ?>/new-images/ongoing-support-icon.svg"/>Support and Evolution
 
           </a></li>
         </ul>
@@ -523,19 +509,21 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
           
             <p>At Techvito, We start by deeply understanding your business needs and challenges. This initial handshake sets the foundation for a strong partnership, ensuring our approach is tailored to your goals from the start.
             </p>
+            <p>Through open communication and collaborative discovery sessions, we dive into the core of your vision, gaining insights into the nuances of your industry.</p>
                 <div class="tab-image">
              <img src="<?php bloginfo('template_directory') ?>/new-images/the-first-handshake.webp"/>
               </div>
         </div>
       </section>
 
-      <section id="side_tab2" class="item" data-title="Aligning Vision and Setting Goals" >
+      <section id="side_tab2" class="item" data-title="Aligning Vision and Goals" >
         <div class="item-content">
         <div>
-            <h3>Aligning Vision and Setting Goals</h3>
+            <h3>Aligning Vision and Goals</h3>
             <div class="flex-line"></div>
-            <p>Through in-depth discussions, we align your vision with our expertise, defining clear goals. This step ensures we’re on the same page, setting a solid foundation for success.
+            <p>Through in-depth discussions, we align your vision with our expertise, defining clear goals. This step ensures we're on the same page, setting a solid foundation for success.
             </p>
+            <p>With a shared understanding established, we collaboratively prioritize objectives and outline key milestones so that every step we take is aligned with your vision and geared towards measurable results.</p>
             <div class="tab-image">
             <img src="<?php bloginfo('template_directory') ?>/new-images/aligning-vision-and-setting-goals.webp"/>
               </div>
@@ -550,6 +538,7 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
             <div class="flex-line"></div>
             <p>We create a strategic, actionable roadmap with measurable milestones. Each step is designed to drive value and guide the project smoothly from start to finish.
           </p>
+          <p>By setting clear timelines and regular checkpoints, we ensure transparency and maintain momentum, enabling us to deliver on expectations while staying aligned with your business objectives.</p>
           <div class="tab-image">
           <img src="<?php bloginfo('template_directory') ?>/new-images/strategic-roadmap.webp"/>
               </div>
@@ -557,12 +546,13 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
         </div>
       </section>
 
-      <section id="side_tab4" class="item" data-title="Iterative and Agile Development">
+      <section id="side_tab4" class="item" data-title="Iterative Development">
         <div class="item-content">
         <div>
-            <h3>Iterative and Agile Development</h3>
+            <h3>Iterative Development</h3>
             <div class="flex-line"></div>
             <p>Our agile process ensures continuous improvement and flexibility. By breaking projects into manageable sprints, we deliver incremental value while adapting to feedback.</p>
+            <p>With each sprint, we refine and enhance the product, ensuring that the final outcome not only meets but exceeds your expectations.</p>
             <div class="tab-image">
             <img src="<?php bloginfo('template_directory') ?>/new-images/iterative-ans-agile-devlopment.webp"/>
               </div>
@@ -571,12 +561,13 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       </section>
 
 
-      <section id="side_tab5" class="item" data-title="Secure and High-Quality Execution">
+      <section id="side_tab5" class="item" data-title="High-Quality Execution">
         <div class="item-content">
         <div>
-            <h3>Secure and High-Quality Execution</h3>
+            <h3>High-Quality Execution</h3>
             <div class="flex-line"></div>
             <p>We prioritize security and quality in every deliverable from Day 1. Through rigorous testing and industry-standard practices, we ensure your project is secure and meets the highest standards.</p>
+            <p>By integrating quality checks and security protocols into our process, we deliver solutions that are resilient, reliable, and built to sustain your business's long-term growth and trust.</p>
             <div class="tab-image">
             <img src="<?php bloginfo('template_directory') ?>/new-images/secure-and-high-quality-execution.webp"/>
               </div>
@@ -585,12 +576,13 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
       </section>
 
 
-      <section id="side_tab6" class="item" data-title="Open and Transparent Communication">
+      <section id="side_tab6" class="item" data-title="Transparent Communication">
         <div class="item-content">
         <div>
-            <h3>Open and Transparent Communication</h3>
+            <h3>Transparent Communication</h3>
             <div class="flex-line"></div>
             <p>We maintain open, real-time communication throughout the project. Regular updates and feedback loops ensure a smooth process and quick issue resolution.</p>
+            <p>By keeping you informed every step of the way, we ensure that our goals stay aligned and that there are no surprises, only seamless progress towards a successful outcome.</p>
             <div class="tab-image">
             <img src="<?php bloginfo('template_directory') ?>/new-images/open-and-transperant-communication.webp"/>
               </div>
@@ -598,14 +590,15 @@ class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
         </div>
       </section>
 
-      <section id="side_tab7" class="item" data-title="Ongoing Support and Evolution">
+      <section id="side_tab7" class="item" data-title="Support and Evolution">
         <div class="item-content">
         <div>
-            <h3>Ongoing Support and Evolution
+            <h3>Support and Evolution
             </h3>
             <div class="flex-line"></div>
-            <p>After delivery, we provide ongoing support to maintain and optimize your solution. We ensure your project continues to evolve and deliver value over time.
+            <p>Our commitment doesn’t end at launch; we stay by your side, ready to implement updates, adapt to new requirements, and scale your solution as your business grows.
           </p>
+          <p>We identify areas for improvement and provide insights to keep your business growing. Our goal is to empower your business with a dynamic, future-ready solution that continues to drive value.</p>
           <div class="tab-image">
           <img src="<?php bloginfo('template_directory') ?>/new-images/ongoing-support-and-evolution.webp"/>
               </div>
@@ -711,35 +704,35 @@ h2 {
           if ($query->have_posts()):
             while ($query->have_posts()):
               $query->the_post();
-              $blogcardimage = get_field('case_study_card_image'); ?>
+              $blogcardimage = get_field('insights_card_image'); ?>
 
-              <div class="blog-content-card col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12" data-categories="<?php
+                  <div class="blog-content-card col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12" data-categories="<?php
 
-              ?>">
-                <div class="card-details">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php if ($case_study_image) { ?>
-                      <img src="<?php echo esc_url($case_study_image['url']); ?>" alt="<?php the_title(); ?>">
-                    <?php } ?>
-                    <div class="related-topic-content">
-                      <h4><?php the_title(); ?></h4>
-                      <?php
+                  ?>">
+                    <div class="card-details">
+                      <a href="<?php the_permalink(); ?>">
+                        <?php if ($blogcardimage) { ?>
+                            <img src="<?php echo esc_url($blogcardimage['url']); ?>" alt="<?php the_title(); ?>">
+                        <?php } ?>
+                        <div class="related-topic-content">
+                          <h4><?php the_title(); ?></h4>
+                          <?php
 
-                      $blog_description = get_field('content_area');
-                      ?>
-                      <p><?php echo wp_trim_words($blog_description, 15); ?></p>
-                      <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
-                    </div>
-                    <!-- <div class="card-contents">
+                          $blog_description = get_field('content_area');
+                          ?>
+                          <p><?php echo wp_trim_words($blog_description, 15); ?></p>
+                          <span>Read More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></span>
+                        </div>
+                        <!-- <div class="card-contents">
                                               
                                             <span><img src="<?php bloginfo('template_directory') ?>/images/time-clock-icon.png"
                                                     class="blog-card-icons" /><?php echo do_shortcode('[rt_reading_time postfix="mins"]'); ?></span>
                                         </div>
                                         <a href="<?php the_permalink(); ?>" class="read-more-link">Read More</a> -->
-                  </a>
-                </div>
-              </div>
-            <?php endwhile;
+                      </a>
+                    </div>
+                  </div>
+              <?php endwhile;
           else:
             echo '<p>No posts found.</p>';
           endif;
@@ -750,7 +743,7 @@ h2 {
       </div>
     </div>
     <div class="view-more-cta">
-      <a>View More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
+      <a href="<?php echo home_url(); ?>/insight/">View More <i class="fa-solid fa-arrow-right blg-read-more-icon"></i></a>
     </div>
   </div>
 </section>
@@ -834,10 +827,8 @@ h2 {
     <div class="quick-contact">
 
       <form id="contactus-enquiry" method="post">
-        <h3>How can we Help ?</h3>
-        <p>Do you have a question or you are interested in working with my team?
-          <br />
-          Just fill out the form below.
+        <h3>Let's Connect!</h3>
+        <p>Have a question or looking to work with us? Fill out the form below, and we'll get back to you soon.
         </p>
 
         <div class="row">
@@ -865,9 +856,13 @@ h2 {
                   <div class="form-box">
 
                     <select id="information" class="form-input" name="information">
-                      <option value="" disabled selected>I'd like to chat about</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                      <option value="Consulting Inquiry">Consulting Inquiry</option>
+                      <option value="" disabled selected>I would like to talk about</option>
+                      <option value="Product Development">Product Development</option>
+                      <option value="Cloud & DevOps">Cloud & DevOps</option>
+                      <option value="Quality Assurance">Quality Assurance</option>
+                      <option value="Advanced Security">Advanced Security</option>
+                      <option value="Trustboxx">Trustboxx</option>
+                      <option value="Plan Madi">Plan Madi</option>
                     </select>
                     <span class="info" id="information-info"></span>
                   </div>
@@ -876,35 +871,30 @@ h2 {
                 <div class="form-box">
                   <textarea class="cntinpttxt" name="message" id="message" placeholder="Message"></textarea>
                 </div>
-                <div class="form-box" style="text-align:center; margin-top:10px;">
-
-                  <input type="checkbox" id="disclaimer" name="disclaimer[]">
-
-                  <label for="disclaimer" id="label-txt">I have read and understood the Terms & Conditions</label>
-                  <br />
-                  <span class="info" id="disclaimer-info"></span>
-
-                </div>
+                <div class="form-box" id="terms-box">
+                <input type="checkbox" id="terms_checkbox" name="terms_checkbox">
+                <label for="terms_checkbox">I have read the Terms and Conditions in the footer.</label><br>
+                <span  id="terms_info" style="color: red; display: none;">Please accept the terms and conditions.</span>
+            </div>
                 <div class="submit-cta-action">
                   <button type="submit" name="cnt_submit" id="cnt_submit">Submit <i
                       class="fa-solid fa-arrow-right blg-read-more-icon"></i> </button>
 
-                  <p>Loading Please wait</p>
+                  <p id="loader-icons">We are capturing your information please wait...</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-
-
-
-
       </form>
     </div>
 
   </div>
 </section>
+
+<div id="snackbar"><img src="<?php bloginfo('template_directory') ?>/new-images/right_icon.png">Your Response was submitted.
+    our team will contact you shortly.</div>  
 
 <script>
   // $(".study-features").slick({
@@ -974,70 +964,7 @@ h2 {
   //   ]
 
   // });
-  $('.client-lists').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 6000,
-    pauseOnHover: true,
-    cssEase: 'linear',
-    responsive: [
-      {
-        breakpoint: 1050,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 6000,
-          pauseOnHover: true,
-          cssEase: 'linear',
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 6000,
-          pauseOnHover: true,
-          cssEase: 'linear',
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 6000,
-          pauseOnHover: true,
-          cssEase: 'linear',
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 6000,
-          pauseOnHover: true,
-          cssEase: 'linear',
-        }
-      },
-    ]
-  });
+  
 
   // $('.expertise-layout-box').slick({
   //   centerPadding: '30%',
@@ -1122,50 +1049,7 @@ h2 {
 </script> -->
 
 
-<script>
-tabControl();
 
-
-var resizeTimer;
-$(window).on('resize', function(e) {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
-    tabControl();
-  }, 250);
-});
-
-
-function tabControl() {
-    var tabs = $('.tabbed-content').find('.tabs');
-    
-    tabs.find('a').on('click', function(event) {
-        event.preventDefault();
-        var target = $(this).attr('href'),
-            buttons = tabs.find('a'),
-            items = tabs.parents('.tabbed-content').find('.item');
-        
-        buttons.removeClass('active');
-        items.removeClass('active');
-        
-        $(this).addClass('active');
-        $(target).addClass('active');
-    });
-    
-    $('.item').on('click', function() {
-        var container = $(this).parents('.tabbed-content'),
-            currId = $(this).attr('id'),
-            items = container.find('.item');
-        
-        items.removeClass('active');
-        $(this).addClass('active');
-        container.find('.tabs a').removeClass('active').filter(`[href="#${currId}"]`).addClass('active');
-    });
-}
-</script>
-
-<style>
-
-</style>
 
 
 

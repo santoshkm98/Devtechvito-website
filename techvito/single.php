@@ -12,15 +12,15 @@
             <div class="fix-layouts">
                 <div class="row">
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-12 mx-auto">
-                        <div class="blog-breadcrumbs">
-                            <ul>
-                                <li><a>Home</a></li>
-                                <li>&#xf061;</li>
-                                <li><a>Blogs</a></li>
-                                <li>&#xf061;</li>
-                                <li><?php the_title(); ?></li>
-                            </ul>
-                        </div>
+                    <div class="layout-breadcrumbs">
+                 <ul>
+                    <li><a>Home</a></li>
+                    <li>/</li>
+                    <li>Insights</li>
+                    <li>/</li>
+                    <li class="active-link"><?php the_title(); ?></li>
+                 </ul>
+                </div>
 
                         <div class="blog-detailed-layout">
                             <h1><?php the_title(); ?></h1>
@@ -28,8 +28,9 @@
                                 <div class="author-info-row">
                                     <img class="avatar" alt="Blog-author"
                                         src="https://cdn-icons-png.freepik.com/512/14268/14268099.png?" />
-                                    <div class="author-info">
                                         <h6>Sandeep Gokhale</h6>
+                                    <div class="author-info">
+                                        <p>3 Mins read</p>
                                         <p><?php the_time('F jS, Y'); ?></p>
                                     </div>
                                 </div>

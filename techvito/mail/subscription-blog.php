@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=UTF-8');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -7,12 +7,11 @@ require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 if($_POST){
-$name = $_POST['cnt_name'];
-$email = $_POST['cnt_email'];
-$phone = $_POST['cnt_phone'];
-$subject = $_POST['information'];
-$message = $_POST['message'];
-
+$name = $_POST['s_name'];
+$email = $_POST['s_email'];
+$title = $_POST['blog_title'];
+$sanitized_title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
+$sanitized_title = html_entity_decode($sanitized_title, ENT_QUOTES, 'UTF-8');
 //to client,third party
 $to=$email;
 $mailer = new PHPMailer();
@@ -35,11 +34,14 @@ $mailer->From ='enquirytechvito@gmail.com';
 
 $mailer->FromName ="Techvito"; 
 $mailer->IsHTML(true);  
-$email_subject= "Thank you for Contacting Techvito";
+$email_subject= "Techvito - Blogs Subscription";
 $email_body="<p>Dear $name,<br><br>
-Thank you for contacting us, our team will call you back soon on your request.</p>
+Thank you for our liking our content. You will now receive amazing content from our end.
+<br/>
+You may unsubscribe from these communications at any time.
+</p>
 
-Regards,<br>
+Thanks,<br>
 Techvito";
 
 $mailer->Body =$email_body;
@@ -58,7 +60,8 @@ $mailer1->SMTPSecure ='ssl';
 $mailer1->Host ='smtp.gmail.com';
 $mailer1->Port       = 465;
 $mailer1->SMTPAuth =TRUE;
-
+$mailer1->CharSet='UTF-8';
+$mailer1->Encoding = 'base64';
 $mailer1->Username ='enquirytechvito@gmail.com';  
 
 $mailer1->Password ='cppkcvkepxztjrok';
@@ -67,17 +70,17 @@ $mailer1->From ='enquirytechvito@gmail.com';
 
 $mailer1->FromName ='Techvito';
 $mailer1->IsHTML(true);
-$email_subject="Techvito- Enquiry from Contact us";  
+$email_subject="Techvito - New Blog Subscription";  
 $email_body ="
-A Visitor has made an enquiry from contact us form 
-The details of the customer are below.<br>
+A User has shown interest in our amazing Blog contents
+Here are the details below.
+<br/>
 Name : <strong>$name</strong>
-Phone : <strong>$phone</strong>
 Email : <strong>$email</strong>
-Subject : <strong>$subject</strong>
-Message: <strong>$message</strong>
+Blog Title: <strong>$sanitized_title</strong>
 
-Regards,
+
+Thanks,
 Techvito
 ";
 $mailer1->Body = nl2br($email_body);
@@ -94,8 +97,6 @@ $mailer1->AddAddress($email1);
 
 //CC
 
-$cc_address="akshatha.janakaraju@techvito.in";
-$mailer1->AddCC($cc_address);
 
 
 if(!$mailer1->Send())
