@@ -31,9 +31,9 @@ if ($_POST) {
     $mailer->SMTPAuth = true;
 
 
-    $mailer->Username ='enquirytechvito@gmail.com';  
+    $mailer->Username ='';  
 
-    $mailer->Password ='cppkcvkepxztjrok';
+    $mailer->Password ='';
     
     $mailer->From ='Techvito';
     
@@ -64,9 +64,9 @@ if ($_POST) {
     $mailer1->Port = 465;
     $mailer1->SMTPAuth = true;
 
-    $mailer1->Username ='enquirytechvito@gmail.com';  
+    $mailer1->Username ='';  
 
-    $mailer1->Password ='cppkcvkepxztjrok';
+    $mailer1->Password ='';
     
     $mailer1->From ='Techvito';
     $mailer1->FromName = $name;
@@ -88,7 +88,7 @@ if ($_POST) {
     $mailer1->Subject = $email_subject;
 
     // Admin recipient
-    $to_admin = "santosh.manjunath@techvito.in"; // Add your admin email here
+    $to_admin = ""; // Add your admin email here
     $recipients_to1 = explode(",", $to_admin);
     foreach ($recipients_to1 as $email1) {
         $mailer1->AddAddress($email1);
