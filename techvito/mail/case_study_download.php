@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Set your SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'enquirytechvito@gmail.com'; // Your SMTP username
-        $mail->Password = 'cppkcvkepxztjrok'; // Your SMTP password (App Password if using Gmail)
+        $mail->Username = ''; // Your SMTP username
+        $mail->Password = ''; // Your SMTP password (App Password if using Gmail)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         // Recipients
-        $mail->setFrom('enquirytechvito@gmail.com', 'Techvito'); // Your sender email and name
+        $mail->setFrom('', 'Techvito'); // Your sender email and name
         $mail->addAddress($email); // Add recipient's email
 
       // Attach the PDF file if it exists
@@ -73,14 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $adminMail->isSMTP();
             $adminMail->Host = 'smtp.gmail.com'; // Set your SMTP server
             $adminMail->SMTPAuth = true;
-            $adminMail->Username = 'enquirytechvito@gmail.com'; // Your SMTP username
-            $adminMail->Password = 'cppkcvkepxztjrok'; // Your SMTP password (App Password if using Gmail)
+            $adminMail->Username = ''; // Your SMTP username
+            $adminMail->Password = ''; // Your SMTP password (App Password if using Gmail)
             $adminMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $adminMail->Port = 587;
 
             // Recipients (Admin email)
-            $adminMail->setFrom('enquirytechvito@gmail.com', 'Techvito'); // Your sender email and name
-            $adminMail->addAddress('santosh.manjunath@techvito.in'); 
+            $adminMail->setFrom('', 'Techvito'); // Your sender email and name
+            $adminMail->addAddress(''); 
             $adminMail->addCC('akshatha.janakaraju@techvito.in'); 
             $pdfFileName = basename($pdf_file_url);
             // Content for admin email
